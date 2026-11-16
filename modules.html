@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מה נכנס במערכת | אופק דסק</title>
+    <meta name="description" content="מודולים שאנחנו משלבים במערכת המותאמת אישית - מחתימות דיגיטליות ועד סוכני AI">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles-new.css">
+    <link rel="stylesheet" href="demo-public.css">
+    <style>
+        .modules-hero {
+            background: var(--cream);
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+        
+        .modules-hero h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--primary);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .modules-intro {
+            max-width: 700px;
+            margin: 0 auto var(--space-2xl);
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: var(--text);
+        }
+        
+        .modules-intro strong {
+            color: var(--primary);
+        }
+        
+        .modules-section {
+            padding: var(--space-2xl) 0;
+            background: var(--white);
+        }
+        
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .module-card {
+            background: var(--cream);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .module-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            opacity: 0.08;
+            border-radius: 0 0 0 100%;
+        }
+        
+        .module-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .module-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: var(--space-md);
+            font-weight: 700;
+        }
+        
+        .module-card h3 {
+            color: var(--primary);
+            font-size: 1.25rem;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .module-card p {
+            color: var(--text);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+        
+        .module-illustration {
+            min-height: 90px;
+            margin-bottom: var(--space-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .module-illustration img {
+            max-width: 100px;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        .modules-cta {
+            text-align: center;
+            padding: var(--space-2xl) 0;
+            background: var(--cream);
+        }
+        
+        @media (max-width: 768px) {
+            .modules-grid {
+                grid-template-columns: 1fr;
+                padding: 0 var(--space-md);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="rights-banner" role="note">הדגמה לתיק עבודות. כל הזכויות שמורות ל-OfficeSense ול-Business Room. השמות, הנתונים והמסכים מומצאים, בלי פרטים מזהים ובלי מידע סודי.</div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <img src="public/logo.svg" alt="אופק דסק">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#solution">הפתרון</a></li>
+                <li><a href="index.html#process">איך זה עובד</a></li>
+                <li><a href="index.html#about">אודות</a></li>
+                <li><a href="modules.html" class="active">מה נכנס במערכת</a></li>
+                <li><a href="demos.html">המערכות בפעולה</a></li>
+                <li><a href="advisor.html">יועץ שיווק אישי</a></li>
+                <li><a href="index.html#contact" class="nav-cta">בואו נדבר</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="תפריט">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="modules-hero">
+        <div class="container">
+            <h1>מה נכנס במערכת</h1>
+            <p class="modules-intro">
+                <strong>המערכת שאנחנו בונים עבורכם</strong> מורכבת ממודולים – כל אחד משרת צורך אחר בעסק. 
+                אנחנו בוחרים איתכם את מה שרלוונטי, מחברים הכל למקום אחד, ומעצבים את הממשק כך שיהיה לכם הכי פשוט ונוח לעבודה. 
+                <strong>הכל מותאם אישית – אין שני עסקים זהים, ואין שתי מערכות זהות.</strong>
+            </p>
+        </div>
+    </section>
+
+    <div class="hero-divider"></div>
+
+    <!-- Modules -->
+    <section class="modules-section">
+        <div class="container">
+            <div class="modules-grid">
+                
+                <div class="module-card">
+                    <div class="module-icon">✍️</div>
+                    <h3>חתימות דיגיטליות</h3>
+                    <p>חתימה על מסמכים, הצעות והתחייבויות אונליין – חוקי, מאובטח ומהיר. בלי הדפסות ובלי שליחים.</p>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-icon">📋</div>
+                    <h3>הצעות מחיר</h3>
+                    <p>יצירה, שליחה ומעקב אחר הצעות מחיר. תבניות מותאמות, המרה להזמנה ולחוזה – הכל בזרם אחד.</p>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-icon">📦</div>
+                    <h3>ניהול מלאי</h3>
+                    <p>מעקב אחר מלאי, התראות על מחסור, עדכון אוטומטי לפי מכירות והזמנות – תמיד יודעים מה על המדף.</p>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-icon">👥</div>
+                    <h3>כרטסת לקוחות חכמה</h3>
+                    <p>כל המידע על הלקוח במקום אחד: היסטוריה, העדפות, תקשורת. CRM שמתאים לאיך שאתם עובדים.</p>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-icon">📢</div>
+                    <h3>ניהול שיווק ופרסום</h3>
+                    <p>תכנון קמפיינים, מעקב אחר ביצועים, תקציבים ורואים – שיווק מסודר וממוקד תוצאות.</p>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-icon">✉️</div>
+                    <h3>תבניות הודעה</h3>
+                    <p>טקסטים לדוגמה שאפשר להציג על המסך. בדמו הזה אין שליחת מייל ואין רשימת תפוצה.</p>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-icon">🤖</div>
+                    <h3>סוכני AI מותאמים לעסק</h3>
+                    <p>בוטים חכמים שעונים ללקוחות, ממליצים, ממלאים טפסים או מנתחים מידע – מותאם בדיוק לצרכים שלכם.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="modules-cta">
+        <div class="container">
+            <p class="section-subtitle" style="margin-bottom: var(--space-lg);">רוצים לדעת אילו מודולים מתאימים לעסק שלכם?</p>
+            <a href="index.html#contact" class="btn btn-primary">בואו נדבר</a>
+        </div>
+    </section>
+
+    <div class="footer-divider"></div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="public/logo-white.svg" alt="אופק דסק">
+                </div>
+                <p class="footer-text">"הנושא ונותן באמונה, נכסיו מתרבין"</p>
+                <div class="footer-bottom">
+                    <p>© 2026 אופק דסק · הדגמה. הדגמה לתיק עבודות. כל הזכויות שמורות ל-OfficeSense ול-Business Room. השמות, הנתונים והמסכים מומצאים, בלי פרטים מזהים ובלי מידע סודי.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuBtn && navMenu) {
+            menuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const spans = menuBtn.querySelectorAll('span');
+                if (navMenu.classList.contains('active')) {
+                    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+                } else {
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

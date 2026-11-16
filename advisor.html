@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>יועץ שיווק לדוגמה | אופק דסק</title>
+    <meta name="description" content="נועם הוא עוזר שיווק מומצא להדגמה. אין כאן אפליקציה חיה.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles-new.css">
+    <link rel="stylesheet" href="demo-public.css">
+    <style>
+        /* === Shlomi page: V dividers (no global hero-divider confusion) === */
+        .shlomi-divider-cream-down {
+            height: 60px;
+            background: var(--white);
+            position: relative;
+            z-index: 2;
+        }
+        .shlomi-divider-cream-down::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: var(--cream);
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+        }
+        .shlomi-divider-white-down {
+            height: 60px;
+            background: var(--cream);
+            position: relative;
+            z-index: 2;
+        }
+        .shlomi-divider-white-down::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: var(--white);
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+        }
+        .shlomi-divider-cream-to-footer {
+            height: 60px;
+            background: var(--primary-dark);
+            position: relative;
+            z-index: 2;
+        }
+        .shlomi-divider-cream-to-footer::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: var(--cream);
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+        }
+
+        .shlomi-hero {
+            background: linear-gradient(180deg, var(--cream) 0%, rgba(250,247,242,0.97) 100%);
+            padding: 90px 0 50px;
+            overflow: hidden;
+        }
+        
+        .shlomi-hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            align-items: center;
+            max-width: 1100px;
+        }
+        
+        /* צד ימין: תמונה + עיגולים (ב-RTL האלמנט הראשון הוא מימין) */
+        .shlomi-hero-visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 280px;
+        }
+        
+        .shlomi-circles-wrap {
+            position: relative;
+            width: 320px;
+            height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .shlomi-circle {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 50%;
+            border: 2px solid rgba(170, 35, 25, 0.35);
+            pointer-events: none;
+            box-sizing: border-box;
+        }
+        
+        /* כדורים על העיגולים – מסתובבים עם הטבעת */
+        .shlomi-ball {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 14px;
+            height: 14px;
+            background: var(--primary);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 2px 8px rgba(170, 35, 25, 0.4);
+            pointer-events: none;
+        }
+        
+        .shlomi-circle-2 .shlomi-ball {
+            width: 12px;
+            height: 12px;
+            background: var(--primary-dark);
+        }
+        
+        .shlomi-circle-3 .shlomi-ball {
+            width: 10px;
+            height: 10px;
+            background: var(--primary-light);
+        }
+        
+        .shlomi-circle-1 {
+            width: 200px;
+            height: 200px;
+            animation: shlomi-spin-1 10s linear infinite;
+        }
+        .shlomi-circle-2 {
+            width: 250px;
+            height: 250px;
+            animation: shlomi-spin-2 14s linear infinite reverse;
+        }
+        .shlomi-circle-3 {
+            width: 300px;
+            height: 300px;
+            animation: shlomi-spin-3 18s linear infinite;
+        }
+        
+        @keyframes shlomi-spin-1 {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes shlomi-spin-2 {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes shlomi-spin-3 {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .shlomi-avatar-wrap {
+            position: relative;
+            z-index: 2;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: var(--white);
+            box-shadow: 0 12px 40px rgba(170, 35, 25, 0.15), 0 0 0 3px rgba(170, 35, 25, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-xs);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .shlomi-avatar-wrap:hover {
+            transform: scale(1.04);
+            box-shadow: 0 16px 50px rgba(170, 35, 25, 0.2), 0 0 0 3px rgba(170, 35, 25, 0.15);
+        }
+        
+        .shlomi-avatar {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        /* צד שמאל: טקסט */
+        .shlomi-hero-content {
+            text-align: right;
+        }
+        
+        .shlomi-hero h1 {
+            font-size: clamp(2rem, 4.5vw, 2.8rem);
+            color: var(--primary);
+            margin: 0 0 var(--space-sm);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        
+        .shlomi-hero .tagline {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin: 0 0 var(--space-md);
+            line-height: 1.6;
+        }
+        
+        .shlomi-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            background: var(--primary);
+            color: var(--white) !important;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            box-shadow: 0 6px 24px rgba(170, 35, 25, 0.35);
+            transition: all 0.3s ease;
+            margin-bottom: var(--space-lg);
+            text-decoration: none;
+        }
+        
+        .shlomi-cta-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 32px rgba(170, 35, 25, 0.45);
+        }
+        
+        .shlomi-intro {
+            max-width: 100%;
+            margin: 0;
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--text);
+        }
+        
+        .shlomi-intro strong {
+            color: var(--primary);
+        }
+        
+        .shlomi-video-section {
+            background: var(--white);
+            padding: var(--space-2xl) 0;
+        }
+        
+        .shlomi-video-section .section-title {
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
+            color: var(--primary);
+        }
+        
+        .shlomi-video-wrap {
+            max-width: 880px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.06);
+        }
+        
+        .shlomi-video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            background: var(--cream-dark);
+        }
+        
+        .shlomi-video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .shlomi-video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            text-align: center;
+            padding: var(--space-xl);
+            background: var(--cream-dark);
+        }
+        
+        .shlomi-features {
+            background: var(--cream);
+            padding: var(--space-2xl) 0;
+        }
+        
+        .shlomi-features h2 {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: var(--space-xl);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+        }
+        
+        .shlomi-features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-lg);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .shlomi-feature-card {
+            background: var(--white);
+            padding: var(--space-xl) var(--space-lg);
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(170, 35, 25, 0.08);
+        }
+        
+        .shlomi-feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+            border-color: rgba(170, 35, 25, 0.2);
+        }
+        
+        .shlomi-feature-card h3 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: var(--space-sm);
+            font-weight: 600;
+        }
+        
+        .shlomi-feature-card p {
+            color: var(--text);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+        
+        .shlomi-features .tagline-end {
+            text-align: center;
+            margin-top: var(--space-xl);
+            font-size: 1.15rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .shlomi-footer-cta {
+            text-align: center;
+            padding: var(--space-2xl) 0;
+            background: var(--cream);
+        }
+        
+        @media (max-width: 768px) {
+            .shlomi-hero .container {
+                grid-template-columns: 1fr;
+                gap: var(--space-lg);
+                text-align: center;
+            }
+            .shlomi-hero-content { text-align: center; }
+            .shlomi-hero-visual { order: -1; min-height: 260px; }
+            .shlomi-circles-wrap { width: 260px; height: 260px; }
+            .shlomi-circle-1 { width: 160px; height: 160px; }
+            .shlomi-circle-2 { width: 200px; height: 200px; }
+            .shlomi-circle-3 { width: 240px; height: 240px; }
+            .shlomi-avatar-wrap { width: 140px; height: 140px; }
+            .shlomi-features-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<div class="rights-banner" role="note">הדגמה לתיק עבודות. כל הזכויות שמורות ל-OfficeSense ול-Business Room. השמות, הנתונים והמסכים מומצאים, בלי פרטים מזהים ובלי מידע סודי.</div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <img src="public/logo.svg" alt="אופק דסק">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#solution">הפתרון</a></li>
+                <li><a href="index.html#process">איך זה עובד</a></li>
+                <li><a href="index.html#about">אודות</a></li>
+                <li><a href="modules.html">מה נכנס במערכת</a></li>
+                <li><a href="demos.html">המערכות בפעולה</a></li>
+                <li><a href="advisor.html" class="active">יועץ שיווק אישי</a></li>
+                <li><a href="index.html#contact" class="nav-cta">בואו נדבר</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="תפריט">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero: תמונה מימין, טקסט משמאל, עיגולים מסתובבים -->
+    <section class="shlomi-hero">
+        <div class="container">
+            <div class="shlomi-hero-visual">
+                <div class="shlomi-circles-wrap">
+                    <span class="shlomi-circle shlomi-circle-1"><span class="shlomi-ball"></span></span>
+                    <span class="shlomi-circle shlomi-circle-2"><span class="shlomi-ball"></span></span>
+                    <span class="shlomi-circle shlomi-circle-3"><span class="shlomi-ball"></span></span>
+                    <div class="shlomi-avatar-wrap">
+                        <img src="public/portrait.svg" alt="איור של עוזר לדוגמה" class="shlomi-avatar">
+                    </div>
+                </div>
+            </div>
+            <div class="shlomi-hero-content">
+                <h1>נועם</h1>
+                <p class="tagline">עוזר שיווק מומצא להדגמה</p>
+                <a href="#sample-chat" class="shlomi-cta-btn">לשיחה לדוגמה</a>
+                <p class="shlomi-intro">
+                    <strong>נועם</strong> הוא יועץ שיווק מומצא להדגמה.
+                    השיחה שבהמשך קבועה מראש, בלי שרת ובלי אפליקציה.
+                    <strong>הכל נשאר על המסך.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="shlomi-divider-cream-down"></div>
+
+    <!-- Video Section -->
+    <section class="shlomi-video-section">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: var(--space-lg);">נועם בפעולה</h2>
+            <div class="shlomi-video-wrap">
+                <div class="sample-chat" id="sample-chat">
+                    <p class="sample-chat-label">שיחה מומצאת. אין חיבור לשרת.</p>
+                    <div class="sample-bubble sample-user">אפשר רעיון לפוסט על סדנה?</div>
+                    <div class="sample-bubble">רעיון לדוגמה: "הסדנה הבאה פתוחה לחמישה מקומות. נרשמים דרך הטופס."</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="shlomi-divider-white-down"></div>
+
+    <!-- What You Get -->
+    <section class="shlomi-features">
+        <div class="container">
+            <h2>מה אתם מקבלים?</h2>
+            <div class="shlomi-features-grid">
+                <div class="shlomi-feature-card">
+                    <h3>תוכנית מדיה</h3>
+                    <p>פריסת פרסום חכמה שמביאה תוצאות</p>
+                </div>
+                <div class="shlomi-feature-card">
+                    <h3>פוסטים שיווקיים</h3>
+                    <p>תוכן מקצועי שמוכר בשבילך</p>
+                </div>
+                <div class="shlomi-feature-card">
+                    <h3>לוח רעיונות</h3>
+                    <p>רעיונות מומצאים להדגמה</p>
+                </div>
+                <div class="shlomi-feature-card">
+                    <h3>חידושים קבועים</h3>
+                    <p>תמיד מוסיפים יכולות חדשות</p>
+                </div>
+            </div>
+            <p class="tagline-end">זה נועם.</p>
+            <p style="text-align: center; margin-top: var(--space-md);">
+                <a href="#sample-chat" class="shlomi-cta-btn">לשיחה לדוגמה</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="shlomi-footer-cta">
+        <div class="container">
+            <a href="index.html#contact" class="btn btn-secondary">רוצים לשמוע עוד? דברו איתנו</a>
+        </div>
+    </section>
+
+    <div class="shlomi-divider-cream-to-footer"></div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="public/logo-white.svg" alt="אופק דסק">
+                </div>
+                <p class="footer-text">"הנושא ונותן באמונה, נכסיו מתרבין"</p>
+                <div class="footer-bottom">
+                    <p>© 2026 אופק דסק · הדגמה. הדגמה לתיק עבודות. כל הזכויות שמורות ל-OfficeSense ול-Business Room. השמות, הנתונים והמסכים מומצאים, בלי פרטים מזהים ובלי מידע סודי.</p>
+                    <p>הדגמה לתיק עבודות. כל הזכויות שמורות ל-OfficeSense ול-Business Room. השמות, הנתונים והמסכים מומצאים, בלי פרטים מזהים ובלי מידע סודי.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuBtn && navMenu) {
+            menuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const spans = menuBtn.querySelectorAll('span');
+                if (navMenu.classList.contains('active')) {
+                    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+                } else {
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            });
+        }
+
+        // Optional: replace placeholder with video if data-video-url is set
+        document.querySelectorAll('.shlomi-video-placeholder').forEach(placeholder => {
+            const url = placeholder.dataset.videoUrl;
+            if (url && url.trim() !== '') {
+                const iframe = document.createElement('iframe');
+                iframe.src = url;
+                iframe.loading = 'lazy';
+                iframe.allow = 'accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture';
+                iframe.allowFullscreen = true;
+                placeholder.parentNode.replaceChild(iframe, placeholder);
+            }
+        });
+    </script>
+</body>
+</html>

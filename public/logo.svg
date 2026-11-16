@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 64">
+  <rect width="64" height="64" rx="14" fill="#AA2319"/>
+  <path d="M14 40c10-18 28-20 36-6" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="46" cy="20" r="4" fill="#fff"/>
+  <text x="78" y="42" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#2B2D2F">אופק דסק</text>
+</svg>

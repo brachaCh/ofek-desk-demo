@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>המערכות בפעולה | אופק דסק</title>
+    <meta name="description" content="מסכי הדגמה עם נתונים מומצאים">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles-new.css">
+    <link rel="stylesheet" href="demo-public.css">
+    <style>
+        /* Demo Page Specific Styles */
+        .demo-hero {
+            background: var(--cream);
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+        
+        .demo-hero h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--primary);
+            margin-bottom: var(--space-md);
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        
+        .demo-hero h1.animate {
+            animation: demoTitleReveal 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+        
+        .demo-hero .hero-intro {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .demo-hero .hero-intro.animate {
+            animation: demoTextReveal 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s forwards;
+        }
+        
+        .demo-hero .hero-tagline {
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-top: var(--space-md);
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        
+        .demo-hero .hero-tagline.animate {
+            animation: demoTaglinePop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.7s forwards;
+        }
+        
+        @keyframes demoTitleReveal {
+            0% {
+                opacity: 0;
+                transform: translateY(50px) scale(0.95);
+                filter: blur(8px);
+            }
+            60% {
+                opacity: 1;
+                transform: translateY(-8px) scale(1.02);
+                filter: blur(0);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                filter: blur(0);
+            }
+        }
+        
+        @keyframes demoTextReveal {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes demoTaglinePop {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+                letter-spacing: 0.2em;
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                letter-spacing: normal;
+            }
+        }
+        
+        .demos-section {
+            padding: var(--space-2xl) 0;
+            background: var(--white);
+        }
+        
+        .demos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-xl);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .demo-card {
+            background: var(--cream);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .demo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .demo-video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background: var(--charcoal);
+        }
+        
+        .demo-video-container iframe,
+        .demo-video-container video.demo-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .demo-video-container video.demo-video {
+            object-fit: contain;
+            background: var(--charcoal);
+        }
+        
+        .demo-video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.1rem;
+            text-align: center;
+            padding: var(--space-md);
+        }
+        
+        .demo-info {
+            padding: var(--space-lg);
+        }
+        
+        .demo-info h3 {
+            color: var(--primary);
+            margin-bottom: var(--space-sm);
+            font-size: 1.3rem;
+        }
+        
+        .demo-info p {
+            color: var(--text);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        .demo-tag {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            font-size: 0.8rem;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .back-home {
+            text-align: center;
+            padding: var(--space-xl) 0;
+            background: var(--cream);
+        }
+        
+        @media (max-width: 768px) {
+            .demos-grid {
+                grid-template-columns: 1fr;
+                padding: 0 var(--space-md);
+            }
+        }
+        
+        /* Demo Pillar Tabs */
+        .demo-pillars-nav {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+            margin-top: var(--space-xl);
+            flex-wrap: wrap;
+        }
+        
+        .demo-pillar-tab {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: var(--space-sm) var(--space-lg);
+            background: var(--white);
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            color: var(--primary-dark);
+            font-weight: 600;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .demo-pillar-tab:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .demo-pillar-icon {
+            font-size: 1.2rem;
+        }
+        
+        .demo-pillar-marketing { border: 2px solid #AA2319; }
+        .demo-pillar-finance { border: 2px solid #D89A3E; }
+        .demo-pillar-management { border: 2px solid #1F6E5C; }
+        
+        @media (max-width: 480px) {
+            .demo-pillars-nav {
+                gap: var(--space-sm);
+            }
+            
+            .demo-pillar-tab {
+                padding: var(--space-xs) var(--space-md);
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="rights-banner" role="note">הדגמה לתיק עבודות. כל הזכויות שמורות ל-OfficeSense ול-Business Room. השמות, הנתונים והמסכים מומצאים, בלי פרטים מזהים ובלי מידע סודי.</div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <img src="public/logo.svg" alt="אופק דסק">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#solution">הפתרון</a></li>
+                <li><a href="index.html#process">איך זה עובד</a></li>
+                <li><a href="index.html#about">אודות</a></li>
+                <li><a href="modules.html">מה נכנס במערכת</a></li>
+                <li><a href="demos.html" class="active">המערכות בפעולה</a></li>
+                <li><a href="advisor.html">יועץ שיווק אישי</a></li>
+                <li><a href="index.html#contact" class="nav-cta">בואו נדבר</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="תפריט">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Demo Hero -->
+    <section class="demo-hero">
+        <div class="container">
+            <h1 id="demo-title">המערכות בפעולה</h1>
+            <p class="hero-intro" id="demo-intro">שיווק. פיננסים. ניהול.<br>מסכים מומצאים, באותו מבנה של דף ההדגמות.</p>
+            <p class="hero-tagline" id="demo-tagline">והכל בהתאמה אישית לצרכי הלקוח</p>
+            
+            <!-- Pillar Tabs -->
+            <div class="demo-pillars-nav">
+                <a href="#demo-marketing" class="demo-pillar-tab demo-pillar-marketing">
+                    <span class="demo-pillar-icon">📈</span>
+                    <span>שיווק</span>
+                </a>
+                <a href="#demo-dashboard" class="demo-pillar-tab demo-pillar-finance">
+                    <span class="demo-pillar-icon">💰</span>
+                    <span>פיננסים</span>
+                </a>
+                <a href="#demo-projects" class="demo-pillar-tab demo-pillar-management">
+                    <span class="demo-pillar-icon">👥</span>
+                    <span>ניהול עובדים</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Divider -->
+    <div class="hero-divider"></div>
+
+    <!-- Demos Section -->
+    <section class="demos-section">
+        <div class="container">
+            <div class="demos-grid">
+                <div class="demo-card" id="demo-customers">
+    <div class="demo-video-container"><div class="mock-screen" role="img" aria-label="כרטסת לדוגמה">
+    <div class="mock-bar"><span></span><span></span><span></span><b>כרטסת לדוגמה</b></div>
+    <div class="mock-kpis"><div><small>פתוח</small><strong>12</strong></div><div><small>היום</small><strong>4</strong></div><div><small>הושלם</small><strong>7</strong></div></div>
+    <div class="mock-body"><div class="mock-row"><i>לקוח לדוגמה א׳</i><em>בתהליך</em></div><div class="mock-row"><i>לקוח לדוגמה ב׳</i><em>פגישה</em></div><div class="mock-row"><i>לקוח לדוגמה ג׳</i><em>הושלם</em></div></div>
+  </div></div>
+    <div class="demo-info"><span class="demo-tag">ניהול לקוחות</span><h3>כרטסת לדוגמה</h3><p>מסך מומצא: פניות לדוגמה, סטטוס ומעקב במקום אחד.</p></div>
+  </div>
+                <div class="demo-card" id="demo-marketing">
+    <div class="demo-video-container"><div class="mock-screen" role="img" aria-label="מעקב פניות">
+    <div class="mock-bar"><span></span><span></span><span></span><b>מעקב פניות</b></div>
+    <div class="mock-kpis"><div><small>פתוח</small><strong>12</strong></div><div><small>היום</small><strong>4</strong></div><div><small>הושלם</small><strong>7</strong></div></div>
+    <div class="mock-body"><div class="mock-row"><i>פנייה לדוגמה 1</i><em>חדש</em></div><div class="mock-row"><i>פנייה לדוגמה 2</i><em>בטיפול</em></div><div class="mock-row"><i>פנייה לדוגמה 3</i><em>נסגר</em></div></div>
+  </div></div>
+    <div class="demo-info"><span class="demo-tag">שיווק</span><h3>מעקב פניות</h3><p>מסך מומצא: מהלכי הדגמה ומעקב, בלי קמפיין אמיתי.</p></div>
+  </div>
+                <div class="demo-card" id="demo-dashboard">
+    <div class="demo-video-container"><div class="mock-screen" role="img" aria-label="דוח לדוגמה">
+    <div class="mock-bar"><span></span><span></span><span></span><b>דוח לדוגמה</b></div>
+    <div class="mock-kpis"><div><small>פתוח</small><strong>12</strong></div><div><small>היום</small><strong>4</strong></div><div><small>הושלם</small><strong>7</strong></div></div>
+    <div class="mock-body"><div class="mock-row"><i>פניות</i><em>18</em></div><div class="mock-row"><i>סגירות</i><em>6</em></div><div class="mock-row"><i>המשך טיפול</i><em>4</em></div></div>
+  </div></div>
+    <div class="demo-info"><span class="demo-tag">לוח בקרה</span><h3>דוח לדוגמה</h3><p>מסך מומצא: מספרים עגולים להצגה, לא נתוני עסק.</p></div>
+  </div>
+                <div class="demo-card" id="demo-projects">
+    <div class="demo-video-container"><div class="mock-screen" role="img" aria-label="לוח צוות לדוגמה">
+    <div class="mock-bar"><span></span><span></span><span></span><b>לוח צוות לדוגמה</b></div>
+    <div class="mock-kpis"><div><small>פתוח</small><strong>12</strong></div><div><small>היום</small><strong>4</strong></div><div><small>הושלם</small><strong>7</strong></div></div>
+    <div class="mock-body"><div class="mock-row"><i>חבר צוות א׳</i><em>זמין</em></div><div class="mock-row"><i>חבר צוות ב׳</i><em>בפגישה</em></div><div class="mock-row"><i>חבר צוות ג׳</i><em>משימה</em></div></div>
+  </div></div>
+    <div class="demo-info"><span class="demo-tag">ניהול צוות</span><h3>לוח צוות לדוגמה</h3><p>מסך מומצא: משימות של צוות לדוגמה.</p></div>
+  </div>
+                <div class="demo-card" id="demo-full">
+    <div class="demo-video-container"><div class="mock-screen" role="img" aria-label="סיכום יומי לדוגמה">
+    <div class="mock-bar"><span></span><span></span><span></span><b>סיכום יומי לדוגמה</b></div>
+    <div class="mock-kpis"><div><small>פתוח</small><strong>12</strong></div><div><small>היום</small><strong>4</strong></div><div><small>הושלם</small><strong>7</strong></div></div>
+    <div class="mock-body"><div class="mock-row"><i>יעד לדוגמה</i><em>פתוח</em></div><div class="mock-row"><i>מעקב לדוגמה</i><em>בתהליך</em></div><div class="mock-row"><i>סיכום לדוגמה</i><em>מוכן</em></div></div>
+  </div></div>
+    <div class="demo-info"><span class="demo-tag">מסך מלא</span><h3>סיכום יומי לדוגמה</h3><p>מסך מומצא שמאחד את שאר התצוגות.</p></div>
+  </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Home -->
+    <section class="back-home">
+        <div class="container">
+            <a href="index.html#contact" class="btn btn-primary">רוצים גם מערכת כזו? דברו איתנו</a>
+        </div>
+    </section>
+
+    <!-- Footer Divider -->
+    <div class="footer-divider"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="public/logo-white.svg" alt="אופק דסק">
+                </div>
+                <p class="footer-text">
+                    "הנושא ונותן באמונה, נכסיו מתרבין"
+                </p>
+                <div class="footer-bottom">
+                    <p>© 2026 אופק דסק · הדגמה. הדגמה לתיק עבודות. כל הזכויות שמורות ל-OfficeSense ול-Business Room. השמות, הנתונים והמסכים מומצאים, בלי פרטים מזהים ובלי מידע סודי.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        if (menuBtn && navMenu) {
+            menuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const spans = menuBtn.querySelectorAll('span');
+                if (navMenu.classList.contains('active')) {
+                    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+                } else {
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

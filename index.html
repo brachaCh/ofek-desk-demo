@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אופק דסק | מאיה גולן - פתרונות שיווק וניהול לעסקים</title>
+    <meta name="description" content="מערכות שיווק וניהול מותאמות אישית לעסק שלכם. ליווי עסקי מקצועי עם מאיה גולן.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles-new.css">
+    <link rel="stylesheet" href="demo-public.css">
+</head>
+<body>
+<div class="rights-banner" role="note">הדגמה לתיק עבודות. כל הזכויות שמורות ל-OfficeSense ול-Business Room. השמות, הנתונים והמסכים מומצאים, בלי פרטים מזהים ובלי מידע סודי.</div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"><div class="scroll-progress-bar"></div></div>
+
+    <!-- Loading Screen -->
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="loader-logo">
+                <img src="public/logo.svg" alt="אופק דסק">
+            </div>
+            <div class="loader-progress">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo">
+                <img src="public/logo.svg" alt="אופק דסק">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#solution" data-content="nav.solution">הפתרון</a></li>
+                <li><a href="#process" data-content="nav.process">איך זה עובד</a></li>
+                <li><a href="#about" data-content="nav.about">אודות</a></li>
+                <li><a href="modules.html" data-content="nav.modules">מה נכנס במערכת</a></li>
+                <li><a href="demos.html" data-content="nav.demos">המערכות בפעולה</a></li>
+                <li><a href="advisor.html" data-content="nav.consultant">יועץ שיווק אישי</a></li>
+                <li><a href="#contact" class="nav-cta" data-content="nav.cta">בואו נדבר</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="תפריט">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-gradient"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title word-reveal" id="heroTitle"></h1>
+                <p class="hero-subtitle" data-content="hero.subtitle" hidden></p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary btn-gradient" data-content="hero.btnPrimary">רוצה לשמוע עוד</a>
+                    <a href="demos.html" class="btn btn-secondary" data-content="hero.btnSecondary">ראו הדגמה</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-animation-wrapper">
+                    <img src="public/scene-desk.svg" alt="מערכת אופק דסק - דשבורד שיווק וניהול על מחשב במשרד" class="hero-main-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Video Section -->
+    <section class="video-intro-section">
+        <div class="container">
+            <h2 class="video-intro-title">צפו ותבינו איך זה עובד</h2>
+            <div class="video-intro-wrapper">
+                <div class="mock-player"><div class="mock-screen" role="img" aria-label="סרטון הוחלף במסך">
+    <div class="mock-bar"><span></span><span></span><span></span><b>סרטון הוחלף במסך</b></div>
+    <div class="mock-kpis"><div><small>פתוח</small><strong>12</strong></div><div><small>היום</small><strong>4</strong></div><div><small>הושלם</small><strong>7</strong></div></div>
+    <div class="mock-body"><div class="mock-row"><i>שלב לדוגמה</i><em>פתוח</em></div><div class="mock-row"><i>מעקב לדוגמה</i><em>היום</em></div><div class="mock-row"><i>סיכום לדוגמה</i><em>מוכן</em></div></div>
+  </div><p class="mock-player-note">אין סרטון חיצוני בדמו הזה.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 Pillars Section - הצרכים הרווחים בעסקים -->
+    <section id="pillars" class="pillars-section">
+        <div class="container">
+            <p class="pillars-pretitle">אז מהו הצורך העסקי שלך, כעת?</p>
+            <h2 class="pillars-headline">שיווק. פיננסים. ניהול.</h2>
+            
+            <!-- הפתקיות - Difficulty statements per pillar -->
+            <div class="pillars-grid pillars-with-notes">
+                <div class="pillar-card pillar-marketing">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title">שיווק</h3>
+                    <div class="pillar-notes">
+                        <span class="pillar-note">לידים שנופלים בין הכיסאות</span>
+                        <span class="pillar-note">שיווק אקראי ולא עקבי</span>
+                    </div>
+                </div>
+                <div class="pillar-card pillar-finance">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title">פיננסים</h3>
+                    <div class="pillar-notes">
+                        <span class="pillar-note">גבייה שנופלת בסוף, אחרי שכולם עייפים</span>
+                        <span class="pillar-note">לא יודעים כמה באמת מרוויחים</span>
+                    </div>
+                </div>
+                <div class="pillar-card pillar-management">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title">ניהול</h3>
+                    <div class="pillar-notes">
+                        <span class="pillar-note">מידע מפוזר בין עשרה כלים שונים</span>
+                        <span class="pillar-note">משימות ומעקבים שנשכחים</span>
+                    </div>
+                </div>
+            </div>
+            <p class="pillars-question">עם מה אתם מזדהים?</p>
+        </div>
+    </section>
+
+    <!-- Marquee Strip -->
+    <div class="marquee-strip">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span class="marquee-item">6 עסקים מומצאים</span>
+                <span class="marquee-separator">&#10038;</span>
+                <span class="marquee-item">נתונים מומצאים</span>
+                <span class="marquee-separator">&#10038;</span>
+                <span class="marquee-item">מערכת מותאמת אישית</span>
+                <span class="marquee-separator">&#10038;</span>
+                <span class="marquee-item">ליווי צמוד ותמיכה</span>
+                <span class="marquee-separator">&#10038;</span>
+                <span class="marquee-item">שיווק שמביא תוצאות</span>
+                <span class="marquee-separator">&#10038;</span>
+                <span class="marquee-item">אוטומציה חכמה</span>
+                <span class="marquee-separator">&#10038;</span>
+                <span class="marquee-item">6 עסקים מומצאים</span>
+                <span class="marquee-separator">&#10038;</span>
+                <span class="marquee-item">נתונים מומצאים</span>
+                <span class="marquee-separator">&#10038;</span>
+                <span class="marquee-item">מערכת מותאמת אישית</span>
+                <span class="marquee-separator">&#10038;</span>
+                <span class="marquee-item">ליווי צמוד ותמיכה</span>
+                <span class="marquee-separator">&#10038;</span>
+                <span class="marquee-item">שיווק שמביא תוצאות</span>
+                <span class="marquee-separator">&#10038;</span>
+                <span class="marquee-item">אוטומציה חכמה</span>
+                <span class="marquee-separator">&#10038;</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Puzzle Intro Section -->
+    <section class="puzzle-section">
+        <div class="container">
+            <ul class="puzzle-bullets" id="puzzleBullets" aria-label="חלקי הפאזל העסקי"></ul>
+            <p class="puzzle-simultaneous" data-content="puzzle.simultaneous">וכל זה קורה... בו-זמנית.</p>
+            <div class="puzzle-question">
+                <div class="puzzle-question-grid">
+                    <div class="puzzle-question-media">
+                        <img src="public/scene-puzzle.svg" alt="חלקי פאזל עסקיים מרחפים ומתחברים מעל שולחן עבודה" loading="lazy">
+                    </div>
+                    <div class="puzzle-question-copy">
+                        <p class="puzzle-question-label" data-content="puzzle.questionLabel">שאלה:</p>
+                        <h2 class="section-title animated-title" data-content="puzzle.question">האם אצלכם, כל החלקים מתחברים?</h2>
+                        <p class="section-subtitle puzzle-question-sub" data-content="puzzle.questionSub">
+                            או שהעסק גדל — והסדר נשאר מאחור?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Questions Section -->
+    <section class="questions-section">
+        <div class="container">
+            <ul class="questions-list" id="questionsList"></ul>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="solution-section dark-red">
+        <div class="container">
+            <div class="solution-image">
+                <div class="compare-wrap">
+                    <div class="compare-slider" data-compare>
+                        <div class="compare-base">
+                            <img src="public/scene-order.svg" alt="עסק מסודר עם מערכת Smart Business" draggable="false">
+                        </div>
+                        <div class="compare-top">
+                            <img src="public/scene-order.svg" alt="עסק מבולגן בלי מערכת" draggable="false">
+                        </div>
+                        <div class="compare-handle" role="slider" tabindex="0" aria-label="גררו להשוואה בין עסק מבולגן לעסק מסודר" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+                            <span class="compare-grip" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 3 12 9 6"/><polyline points="15 6 21 12 15 18"/></svg>
+                            </span>
+                        </div>
+                    </div>
+                    <p class="compare-hint">גררו את הידית — ותראו לאן העסק שלכם יכול להגיע</p>
+                </div>
+            </div>
+            <div class="solution-content">
+                <p class="section-tag light" data-content="solution.tag">Smart Business</p>
+                <h2 class="section-title light" data-content="solution.title">ברוכים הבאים לעולם של Smart Business</h2>
+                <p class="section-text light" data-content="solution.text">
+                    מערכת ניהול ושיווק חכמה, מותאמת אישית לעסק שלכם — שמרכזת הכל למקום אחד.
+                </p>
+                
+                <ul class="solution-list light" id="solutionList"></ul>
+                
+                <a href="#process" class="btn btn-white" data-content="solution.btn">רוצה לראות איך זה עובד</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Section - הצצות אמיתיות למערכת -->
+    <section id="showcase" class="showcase-section">
+        <div class="container">
+            <header class="showcase-header">
+                <p class="section-tag">ככה זה נראה מבפנים</p>
+                <h2 class="section-title animated-title">פחות הבטחות. בואו תראו.</h2>
+                <p class="section-subtitle">שלוש הצצות למה שמערכת אחת חכמה עושה לעסק:</p>
+            </header>
+
+            <div class="showcase-grid">
+                <article class="showcase-card showcase-lilac showcase-wide">
+                    <div class="showcase-copy">
+                        <span class="showcase-num">01</span>
+                        <h3 class="showcase-title">ציר זמן חכם לעסק</h3>
+                        <p class="showcase-text">כל התהליכים וכל האירועים — מסודרים על ציר אחד. רואים מה קרה, מה קורה עכשיו, ומה הצעד הבא.</p>
+                    </div>
+                    <div class="showcase-media">
+                        <img src="public/scene-timeline.svg" alt="ציר זמן חכם לעסק - כל האירועים במקום אחד" loading="lazy" draggable="false">
+                    </div>
+                </article>
+
+                <article class="showcase-card showcase-mint">
+                    <div class="showcase-copy">
+                        <span class="showcase-num">02</span>
+                        <h3 class="showcase-title">כל העסק. במקום אחד.</h3>
+                        <p class="showcase-text">יומן, משימות ודוחות — כלים לדוגמה במקום אחד.</p>
+                    </div>
+                    <div class="showcase-media">
+                        <img src="public/scene-hub.svg" alt="מרכז קישורים - כל הכלים של העסק במקום אחד" loading="lazy" draggable="false">
+                    </div>
+                </article>
+
+                <article class="showcase-card showcase-amber">
+                    <div class="showcase-copy">
+                        <span class="showcase-num">03</span>
+                        <h3 class="showcase-title">שעון נוכחות שעושה סדר</h3>
+                        <p class="showcase-text">גררו את הידית — ותראו את ההבדל בעצמכם.</p>
+                    </div>
+                    <div class="compare-slider compare-mini" data-compare>
+                        <div class="compare-base">
+                            <img src="public/scene-clock.svg" alt="עסק בלי שעון נוכחות - בלגן ובזבוז זמן" draggable="false">
+                        </div>
+                        <div class="compare-top">
+                            <img src="public/scene-clock.svg" alt="עסק עם שעון נוכחות - מסודר ויעיל" draggable="false">
+                        </div>
+                        <div class="compare-handle" role="slider" tabindex="0" aria-label="גררו להשוואה בין עסק עם ובלי שעון נוכחות" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+                            <span class="compare-grip" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 3 12 9 6"/><polyline points="15 6 21 12 15 18"/></svg>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Imagine Section -->
+    <section class="imagine-section">
+        <div class="container">
+            <h2 class="section-title animated-title" data-content="imagine.title">דמיינו עסק שבו...</h2>
+            <div class="imagine-grid">
+                <div class="imagine-media">
+                    <img src="public/scene-desk.svg" alt="עסק מסודר - מערכת ניהול על מחשב ונייד בסביבת עבודה רגועה" loading="lazy">
+                </div>
+                <ul class="imagine-list" id="imagineList"></ul>
+            </div>
+            <p class="imagine-footer" data-content="imagine.footer"></p>
+            <p class="imagine-footer-highlight" data-content="imagine.footerHighlight">עם Smart Business זה אפשרי!</p>
+        </div>
+    </section>
+
+    <!-- Pillars Highlight Section (7-9 Block) - הפתרונות שלנו -->
+    <section class="pillars-highlight" id="solutions-pillars">
+        <div class="container">
+            <p class="pillars-pretitle light">שלושה פתרונות לדוגמה. כל אחד מהם רץ על המערכת האוטומטית שלכם.</p>
+            <h2 class="pillars-headline">שיווק. פיננסים. ניהול.</h2>
+            <p class="pillars-subtitle">וכל פתרון, בנינו על גבי מערכת אוטומטית! הנה, ראו:</p>
+            
+            <div class="pillars-highlight-grid">
+                <!-- שיווק - Marketing Solutions -->
+                <div class="pillar-highlight-card" id="pillar-marketing">
+                    <span class="pillar-highlight-num">1 מתוך 3</span>
+                    <h3>שיווק.</h3>
+                    <div class="pillar-solutions">
+                        <div class="pillar-solution">
+                            <h4>הצעת מחיר בלחיצה</h4>
+                            <p>הצעה לדוגמה נפתחת על המסך. אין שליחה.</p>
+                        </div>
+                        <div class="pillar-solution">
+                            <h4>אף פנייה לא נופלת</h4>
+                            <p>כל פנייה, מכל ערוץ, נכנסת לכרטיס לקוח אחד שהוא מרכז העבודה.</p>
+                        </div>
+                        <div class="pillar-solution">
+                            <h4>רשימות שיווק חכמות</h4>
+                            <p>רשימה לדוגמה לפי קהל, תאריך ושירות. מוצגת על המסך בלבד.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- פיננסים - Finance Solutions -->
+                <div class="pillar-highlight-card" id="pillar-finance">
+                    <span class="pillar-highlight-num">2 מתוך 3</span>
+                    <h3>פיננסים.</h3>
+                    <div class="pillar-solutions">
+                        <div class="pillar-solution">
+                            <h4>דוח ביצוע יומי ושבועי</h4>
+                            <p>שיחות, הצעות ועסקאות, עם גרפים וייצוא. החלטות לפי נתונים.</p>
+                        </div>
+                        <div class="pillar-solution">
+                            <h4>לוח רווח תפעולי</h4>
+                            <p>הכנסות מול עלות עבודה, בזמן אמת. יודעים כמה באמת מרוויחים.</p>
+                        </div>
+                        <div class="pillar-solution">
+                            <h4>מהאירוע לחשבונית</h4>
+                            <p>מסך לדוגמה של סיכום עסקה. אין סליקה ואין הפקת מסמך אמיתי.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ניהול - Management Solutions -->
+                <div class="pillar-highlight-card" id="pillar-management">
+                    <span class="pillar-highlight-num">3 מתוך 3</span>
+                    <h3>ניהול.</h3>
+                    <div class="pillar-solutions">
+                        <div class="pillar-solution">
+                            <h4>גמישות מלאה, בלי מתכנת</h4>
+                            <p>עורכים כל טקסט, מוסיפים שדות ולשוניות וגוררים כפתורים. בעצמכם.</p>
+                        </div>
+                        <div class="pillar-solution">
+                            <h4>שעון נוכחות ולוח עבודה</h4>
+                            <p>נוכחות אוטומטית לעובדים, ושעות העבודה מול העלות שלהן.</p>
+                        </div>
+                        <div class="pillar-solution">
+                            <h4>לוח בקרה חכם</h4>
+                            <p>כל המשימות, המעקבים והפגישות של היום, במסך אחד.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="pillars-note-bottom">וזהו רק מדגם מייצג! מתוך שלל הפתרונות שיצרנו.</p>
+        </div>
+    </section>
+
+    <!-- Smart Closing Section -->
+    <section class="smart-closing-section">
+        <div class="container">
+            <div class="smart-closing-lines" id="smartClosingLines"></div>
+            <h2 class="smart-closing-brand" data-content="smartClosing.brand">Smart Business</h2>
+            <p class="smart-closing-tagline" data-content="smartClosing.tagline"></p>
+            <p class="smart-closing-text" data-content="smartClosing.closing">כשהעסק עובד כמערכת אחת — אתם פנויים לצמוח. 🚀</p>
+        </div>
+    </section>
+
+    <!-- System Demo Section -->
+    <section id="system-demo" class="process-section system-demo-section">
+        <div class="container">
+            <header class="process-header system-demo-header">
+                <p class="section-tag" data-content="demo.tag" hidden></p>
+                <h2 class="section-title animated-title" data-content="demo.title">המערכת בפעולה</h2>
+                <p class="section-subtitle" data-content="demo.subtitle">עשרות מערכות. מאות מסכים. הכל בהתאמה אישית.</p>
+            </header>
+
+            <div id="system-demo-video-wrap" class="system-demo-video" hidden>
+                <div class="system-demo-video-placeholder" data-video-url=""></div>
+            </div>
+
+            <div class="wall-stage">
+            <div class="systems-wall" aria-label="מסכי הדגמה עם נתונים מומצאים"><figure class="wall-tile"><div class="mock-screen" role="img" aria-label="כרטסת לדוגמה">
+    <div class="mock-bar"><span></span><span></span><span></span><b>כרטסת לדוגמה</b></div>
+    <div class="mock-kpis"><div><small>פתוח</small><strong>12</strong></div><div><small>היום</small><strong>4</strong></div><div><small>הושלם</small><strong>7</strong></div></div>
+    <div class="mock-body"><div class="mock-row"><i>לקוח לדוגמה א׳</i><em>בתהליך</em></div><div class="mock-row"><i>לקוח לדוגמה ב׳</i><em>פגישה</em></div><div class="mock-row"><i>לקוח לדוגמה ג׳</i><em>הושלם</em></div></div>
+  </div><figcaption>ניהול לקוחות</figcaption></figure>
+<figure class="wall-tile"><div class="mock-screen" role="img" aria-label="לוח משימות">
+    <div class="mock-bar"><span></span><span></span><span></span><b>לוח משימות</b></div>
+    <div class="mock-kpis"><div><small>פתוח</small><strong>12</strong></div><div><small>היום</small><strong>4</strong></div><div><small>הושלם</small><strong>7</strong></div></div>
+    <div class="mock-body"><div class="mock-row"><i>משימה לדוגמה 1</i><em>היום</em></div><div class="mock-row"><i>משימה לדוגמה 2</i><em>מחר</em></div><div class="mock-row"><i>משימה לדוגמה 3</i><em>הושלם</em></div></div>
+  </div><figcaption>משימות</figcaption></figure>
+<figure class="wall-tile"><div class="mock-screen" role="img" aria-label="יומן לדוגמה">
+    <div class="mock-bar"><span></span><span></span><span></span><b>יומן לדוגמה</b></div>
+    <div class="mock-kpis"><div><small>פתוח</small><strong>12</strong></div><div><small>היום</small><strong>4</strong></div><div><small>הושלם</small><strong>7</strong></div></div>
+    <div class="mock-body"><div class="mock-row"><i>פגישת היכרות</i><em>10:00</em></div><div class="mock-row"><i>שיחת המשך</i><em>13:30</em></div><div class="mock-row"><i>סיכום שבוע</i><em>16:00</em></div></div>
+  </div><figcaption>יומן</figcaption></figure>
+<figure class="wall-tile"><div class="mock-screen" role="img" aria-label="נרשמים לדוגמה">
+    <div class="mock-bar"><span></span><span></span><span></span><b>נרשמים לדוגמה</b></div>
+    <div class="mock-kpis"><div><small>פתוח</small><strong>12</strong></div><div><small>היום</small><strong>4</strong></div><div><small>הושלם</small><strong>7</strong></div></div>
+    <div class="mock-body"><div class="mock-row"><i>משתתף לדוגמה א׳</i><em>רשום</em></div><div class="mock-row"><i>משתתף לדוגמה ב׳</i><em>ממתין</em></div><div class="mock-row"><i>משתתף לדוגמה ג׳</i><em>הושלם</em></div></div>
+  </div><figcaption>סדנאות</figcaption></figure>
+<figure class="wall-tile"><div class="mock-screen" role="img" aria-label="דוח לדוגמה">
+    <div class="mock-bar"><span></span><span></span><span></span><b>דוח לדוגמה</b></div>
+    <div class="mock-kpis"><div><small>פתוח</small><strong>12</strong></div><div><small>היום</small><strong>4</strong></div><div><small>הושלם</small><strong>7</strong></div></div>
+    <div class="mock-body"><div class="mock-row"><i>פניות</i><em>18</em></div><div class="mock-row"><i>סגירות</i><em>6</em></div><div class="mock-row"><i>המשך טיפול</i><em>4</em></div></div>
+  </div><figcaption>דוח</figcaption></figure>
+<figure class="wall-tile"><div class="mock-screen" role="img" aria-label="מעקב פניות">
+    <div class="mock-bar"><span></span><span></span><span></span><b>מעקב פניות</b></div>
+    <div class="mock-kpis"><div><small>פתוח</small><strong>12</strong></div><div><small>היום</small><strong>4</strong></div><div><small>הושלם</small><strong>7</strong></div></div>
+    <div class="mock-body"><div class="mock-row"><i>פנייה לדוגמה 1</i><em>חדש</em></div><div class="mock-row"><i>פנייה לדוגמה 2</i><em>בטיפול</em></div><div class="mock-row"><i>פנייה לדוגמה 3</i><em>נסגר</em></div></div>
+  </div><figcaption>פניות</figcaption></figure>
+<figure class="wall-tile"><div class="mock-screen" role="img" aria-label="לוח צוות">
+    <div class="mock-bar"><span></span><span></span><span></span><b>לוח צוות</b></div>
+    <div class="mock-kpis"><div><small>פתוח</small><strong>12</strong></div><div><small>היום</small><strong>4</strong></div><div><small>הושלם</small><strong>7</strong></div></div>
+    <div class="mock-body"><div class="mock-row"><i>חבר צוות א׳</i><em>זמין</em></div><div class="mock-row"><i>חבר צוות ב׳</i><em>בפגישה</em></div><div class="mock-row"><i>חבר צוות ג׳</i><em>משימה</em></div></div>
+  </div><figcaption>צוות</figcaption></figure>
+<figure class="wall-tile"><div class="mock-screen" role="img" aria-label="סיכום יומי">
+    <div class="mock-bar"><span></span><span></span><span></span><b>סיכום יומי</b></div>
+    <div class="mock-kpis"><div><small>פתוח</small><strong>12</strong></div><div><small>היום</small><strong>4</strong></div><div><small>הושלם</small><strong>7</strong></div></div>
+    <div class="mock-body"><div class="mock-row"><i>יעד לדוגמה</i><em>פתוח</em></div><div class="mock-row"><i>מעקב לדוגמה</i><em>בתהליך</em></div><div class="mock-row"><i>סיכום לדוגמה</i><em>מוכן</em></div></div>
+  </div><figcaption>סיכום</figcaption></figure></div>
+            <p class="systems-wall-note">מסכי הדגמה עם נתונים מומצאים. אין כאן מערכת של לקוח.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Needs Section -->
+    <section id="business-needs" class="business-needs-section">
+        <div class="container">
+            <header class="business-needs-header">
+                <p class="section-tag" data-content="businessNeeds.tag" hidden></p>
+                <h2 class="section-title animated-title" data-content="businessNeeds.title">רוצים לבדוק האם זה הפתרון שחיפשתם?</h2>
+                <p class="section-subtitle" data-content="businessNeeds.subtitle">סמנו צרכים. אפיון לדוגמה יופיע על המסך. שום דבר לא נשלח.</p>
+            </header>
+
+            <form class="needs-form" id="needsForm" novalidate>
+                <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">
+                    <label>אל תמלאו שדה זה<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+                </div>
+                <fieldset class="needs-checklist-wrap">
+                    <legend class="visually-hidden" data-content="businessNeeds.title">רוצים לבדוק האם זה הפתרון שחיפשתם?</legend>
+                    <div class="needs-checklist" id="needsChecklist" role="group" aria-label="צרכים עסקיים" tabindex="-1"></div>
+
+                    <div class="needs-custom-wrap" id="needsCustomWrap" hidden>
+                        <div class="needs-custom-add">
+                            <label class="visually-hidden" for="needsCustomInput" data-content="businessNeeds.customLabel">צורך נוסף</label>
+                            <input type="text" id="needsCustomInput" class="needs-custom-input" placeholder="הוסיפו צורך שלא ברשימה" data-content-placeholder="businessNeeds.customPlaceholder" autocomplete="off">
+                            <button type="button" class="btn btn-secondary btn-sm needs-custom-add-btn" id="needsCustomAddBtn" data-content="businessNeeds.customAddBtn">הוספה</button>
+                        </div>
+                        <div class="needs-custom-list" id="needsCustomList" aria-live="polite"></div>
+                    </div>
+
+                    <p class="needs-validation-msg" id="needsValidationMsg" role="alert" hidden data-content="businessNeeds.validationMessage">בחרו לפחות צורך אחד</p>
+                </fieldset>
+
+                <button type="button" class="btn btn-secondary needs-expand-btn" id="needsExpandBtn" data-content="businessNeeds.expandBtn">לקבלת האבחון המלא</button>
+
+                <div class="needs-form-extended" id="needsFormExtended" hidden>
+                    <div class="needs-contact-fields">
+                        <div class="form-group">
+                            <label for="needs-name" data-content="contact.labelName">שם מלא</label>
+                            <input type="text" id="needs-name" name="name" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="needs-email" data-content="contact.labelEmail">אימייל</label>
+                            <input type="email" id="needs-email" name="email" required autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="needs-phone" data-content="contact.labelPhone">טלפון</label>
+                            <input type="tel" id="needs-phone" name="phone" required autocomplete="tel">
+                        </div>
+                    </div>
+
+                    <div class="needs-extra-fields">
+                        <div class="form-group needs-field-full">
+                            <label for="needs-product" data-content="businessNeeds.mainProductLabel">מהו המוצר/השירות המרכזי שאתם משווקים?</label>
+                            <input type="text" id="needs-product" name="mainProduct" required autocomplete="organization">
+                        </div>
+
+                        <fieldset class="needs-business-type">
+                            <legend data-content="businessNeeds.businessTypeLabel">האם אתם:</legend>
+                            <div class="needs-radio-group" role="radiogroup" aria-labelledby="needs-business-type-legend">
+                                <label class="needs-radio-item">
+                                    <input type="radio" name="businessType" value="exempt" required>
+                                    <span data-content="businessNeeds.businessTypeExempt">עוסק פטור</span>
+                                </label>
+                                <label class="needs-radio-item">
+                                    <input type="radio" name="businessType" value="licensed">
+                                    <span data-content="businessNeeds.businessTypeLicensed">עסק מורשה</span>
+                                </label>
+                                <label class="needs-radio-item">
+                                    <input type="radio" name="businessType" value="company">
+                                    <span data-content="businessNeeds.businessTypeCompany">חברה בע&quot;מ</span>
+                                </label>
+                                <label class="needs-radio-item">
+                                    <input type="radio" name="businessType" value="nonprofit">
+                                    <span data-content="businessNeeds.businessTypeNonprofit">עמותה</span>
+                                </label>
+                                <label class="needs-radio-item">
+                                    <input type="radio" name="businessType" value="other">
+                                    <span data-content="businessNeeds.businessTypeOther">אחר</span>
+                                </label>
+                            </div>
+                            <div class="form-group needs-other-wrap" id="needsBusinessTypeOtherWrap" hidden>
+                                <label for="needs-business-type-other" data-content="businessNeeds.businessTypeOtherLabel">פרטו</label>
+                                <input type="text" id="needs-business-type-other" name="businessTypeOther" autocomplete="off">
+                            </div>
+                        </fieldset>
+
+                        <div class="form-group needs-field-full">
+                            <label for="needs-employees" data-content="businessNeeds.employeeCountLabel">כמה עובדים בעסק?</label>
+                            <input type="number" id="needs-employees" name="employeeCount" min="0" step="1" inputmode="numeric" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" data-content="businessNeeds.submitBtn">שלחו את הרשימה</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Impact Numbers Section -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="impact-grid" id="impactGrid"></div>
+        </div>
+    </section>
+
+    <!-- Client Logos Section -->
+    <section class="clients-section">
+        <div class="container">
+            <h2 class="clients-title" data-content="clients.title">לקוחות שעובדים איתנו</h2>
+            <div class="clients-logos">
+                <div class="client-logo"><img src="public/client-a.svg" alt="סטודיו עלה"></div>
+                <div class="client-logo"><img src="public/client-b.svg" alt="בית קפה נור"></div>
+                <div class="client-logo"><img src="public/client-c.svg" alt="גלריה קו"></div>
+                <div class="client-logo"><img src="public/client-d.svg" alt="סדנת אור"></div>
+                <div class="client-logo"><img src="public/client-e.svg" alt="בוטיק פס"></div>
+                <div class="client-logo"><img src="public/client-f.svg" alt="חנות דמו"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <p class="section-tag" data-content="about.tag">מי אנחנו</p>
+                <p class="about-greeting" data-content="about.greeting">נעים להכיר</p>
+                <h2 class="section-title" data-content="about.name">מאיה גולן</h2>
+                <p class="about-role" data-content="about.role">וצוות אופק דסק</p>
+                
+                <div class="about-text">
+                    <p data-content="about.para1">
+                        כ-30 שנות ניסיון בשיווק ופיתוח עסקי. ליווינו אלפי בעלי עסקים — וראינו עסקים קטנים הופכים לגדולים, ועסקים כבדים שועטים קדימה.
+                    </p>
+                    <p data-content="about.para2">
+                        עסק הוא חלום שנרקם למציאות. לא עוד פתרונות גנריים — אלא מענה שמותאם בדיוק לכם.
+                    </p>
+                    <p data-content="about.para3">
+                        המשימה שלנו: הכלים, המערכות והליווי שיתנו לעסק שלכם לפרוח.<br>
+                        בדרך שלכם. בקצב שלכם.
+                    </p>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-content="about.stat1Number">25+</span>
+                        <span class="stat-label" data-content="about.stat1Label">שנות ניסיון</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-content="about.stat2Number">1000+</span>
+                        <span class="stat-label" data-content="about.stat2Label">עסקים שליווינו</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-content="about.stat3Number">100%</span>
+                        <span class="stat-label" data-content="about.stat3Label">ישראלי</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="public/portrait.svg" alt="איור של דמות לדוגמה" class="portrait-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <p class="section-tag" data-content="testimonials.tag">מה אומרים עלינו</p>
+            <h2 class="section-title animated-title" data-content="testimonials.title">לקוחות מספרים</h2>
+            
+            <div class="testimonials-carousel">
+                <div class="carousel-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="testimonial-content">
+                            <p data-content="testimonials.quote1">
+                                "הגענו אליכם מותשים, מבולבלים, עם עסק שעובד מסביב לשעון – 
+                                אך לא באמת מתקדם. כבר מהשיחה הראשונה הרגשנו שלא מדובר 
+                                בעוד 'נותני שירות' אלא באנשים שבאמת רואים אותנו!"
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">כ</div>
+                            <div class="author-info">
+                                <strong data-content="testimonials.author1">דמות לדוגמה א׳</strong>
+                                <span data-content="testimonials.role1">בעלי בית ספר מקצועי</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="testimonial-content">
+                            <p data-content="testimonials.quote2">
+                                "קיבלנו פתרונות יצירתיים, מדויקים, חכמים – כאלה שלא רק 
+                                פתרו בעיות אלא בנו לנו דרך חדשה להתנהל. כיום העסק שלנו 
+                                מסודר, יציב, רווחי, ובעיקר נינוח."
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">ש</div>
+                            <div class="author-info">
+                                <strong data-content="testimonials.author2">דמות לדוגמה ב׳</strong>
+                                <span data-content="testimonials.role2">בעלת סטודיו לריקוד</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="testimonial-content">
+                            <p>"מאז שעברנו ל-אופק דסק, העסק שלנו עלה רמה. 
+                            הכל מסודר, אוטומטי, ואנחנו סוף סוף יודעים בדיוק מה קורה 
+                            עם כל לקוח. החזרנו את השליטה לידיים שלנו!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">מ</div>
+                            <div class="author-info">
+                                <strong>דמות לדוגמה ג׳</strong>
+                                <span>עסק לדוגמה</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="testimonial-content">
+                            <p>"הליווי שקיבלנו היה מעבר לכל ציפייה. לא רק בנו לנו מערכת - 
+                            הם הבינו את העסק שלנו לעומק ויצרו פתרון שמותאם בדיוק לנו. 
+                            זה ציטוט מומצא להדגמה."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">א</div>
+                            <div class="author-info">
+                                <strong>דמות לדוגמה ד׳</strong>
+                                <span>עסק לדוגמה</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="testimonial-content">
+                            <p>"אני ממליצה על אופק דסק לכל בעלת עסק שמרגישה שהיא 
+                            טובעת בבלגן. תוך שבועיים הכל היה מסודר, המערכת עובדת כמו 
+                            שעון, ואני סוף סוף נושמת!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">ר</div>
+                            <div class="author-info">
+                                <strong>דמות לדוגמה ה׳</strong>
+                                <span>עסק לדוגמה</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn carousel-prev" aria-label="הקודם">&#8594;</button>
+                    <div class="carousel-dots"></div>
+                    <button class="carousel-btn carousel-next" aria-label="הבא">&#8592;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real recommendation screenshots (פידבקים) -->
+    <section id="recommendations" class="love-section" aria-label="ציטוטים מומצאים">
+        <div class="love-glow" aria-hidden="true"></div>
+        <div class="container love-header">
+            <p class="section-tag light">ציטוטים מומצאים</p>
+            <h2 class="section-title light animated-title">מילים שנכתבו להדגמה</h2>
+            <p class="love-sub">אין כאן מיילים, וואטסאפ או המלצות אמיתיות.</p>
+        </div>
+        <div class="container">
+            <div class="quote-grid">
+                <article class="quote-card"><p>ציטוט מומצא: סוף סוף רואים את הפניות הפתוחות במסך אחד.</p><span>דמות לדוגמה א׳ · סטודיו עלה</span></article>
+                <article class="quote-card"><p>ציטוט מומצא: המשימות של הצוות הפסיקו להתפזר בין פתקים.</p><span>דמות לדוגמה ב׳ · סדנת אור</span></article>
+                <article class="quote-card"><p>ציטוט מומצא: הדוח השבועי לדוגמה יושב ליד היומן.</p><span>דמות לדוגמה ג׳ · בית קפה נור</span></article>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="process-section">
+        <div class="container">
+            <header class="process-header">
+                <p class="section-tag" data-content="process.tag" hidden></p>
+                <h2 class="section-title animated-title" data-content="process.title">איך זה עובד?</h2>
+                <p class="section-subtitle" data-content="process.subtitle">בואו ותראו!</p>
+            </header>
+
+            <div class="process-cinema">
+                <p class="process-cinema-lead">הצצה למסכי הדגמה עם נתונים מומצאים:</p>
+                <div class="process-videos">
+                    <a class="video-teaser" href="demos.html#demo-customers" id="teaser-customers">
+    <div class="mock-screen" role="img" aria-label="כרטסת לדוגמה">
+    <div class="mock-bar"><span></span><span></span><span></span><b>כרטסת לדוגמה</b></div>
+    <div class="mock-kpis"><div><small>פתוח</small><strong>12</strong></div><div><small>היום</small><strong>4</strong></div><div><small>הושלם</small><strong>7</strong></div></div>
+    <div class="mock-body"><div class="mock-row"><i>לקוח לדוגמה א׳</i><em>בתהליך</em></div><div class="mock-row"><i>לקוח לדוגמה ב׳</i><em>פגישה</em></div><div class="mock-row"><i>לקוח לדוגמה ג׳</i><em>הושלם</em></div></div>
+  </div>
+    <span class="video-teaser-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+    <div class="video-teaser-overlay"><span class="video-teaser-tag">לקוחות</span><h3>כרטסת לדוגמה</h3></div>
+  </a>
+                    <a class="video-teaser" href="demos.html#demo-dashboard" id="teaser-dashboard">
+    <div class="mock-screen" role="img" aria-label="דוח לדוגמה">
+    <div class="mock-bar"><span></span><span></span><span></span><b>דוח לדוגמה</b></div>
+    <div class="mock-kpis"><div><small>פתוח</small><strong>12</strong></div><div><small>היום</small><strong>4</strong></div><div><small>הושלם</small><strong>7</strong></div></div>
+    <div class="mock-body"><div class="mock-row"><i>פניות</i><em>18</em></div><div class="mock-row"><i>סגירות</i><em>6</em></div><div class="mock-row"><i>המשך טיפול</i><em>4</em></div></div>
+  </div>
+    <span class="video-teaser-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+    <div class="video-teaser-overlay"><span class="video-teaser-tag">לוח</span><h3>דוח לדוגמה</h3></div>
+  </a>
+                    <a class="video-teaser" href="demos.html#demo-marketing" id="teaser-marketing">
+    <div class="mock-screen" role="img" aria-label="מעקב פניות">
+    <div class="mock-bar"><span></span><span></span><span></span><b>מעקב פניות</b></div>
+    <div class="mock-kpis"><div><small>פתוח</small><strong>12</strong></div><div><small>היום</small><strong>4</strong></div><div><small>הושלם</small><strong>7</strong></div></div>
+    <div class="mock-body"><div class="mock-row"><i>פנייה לדוגמה 1</i><em>חדש</em></div><div class="mock-row"><i>פנייה לדוגמה 2</i><em>בטיפול</em></div><div class="mock-row"><i>פנייה לדוגמה 3</i><em>נסגר</em></div></div>
+  </div>
+    <span class="video-teaser-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+    <div class="video-teaser-overlay"><span class="video-teaser-tag">שיווק</span><h3>מעקב פניות</h3></div>
+  </a>
+                    <a class="video-teaser" href="demos.html#demo-projects" id="teaser-projects">
+    <div class="mock-screen" role="img" aria-label="לוח צוות">
+    <div class="mock-bar"><span></span><span></span><span></span><b>לוח צוות</b></div>
+    <div class="mock-kpis"><div><small>פתוח</small><strong>12</strong></div><div><small>היום</small><strong>4</strong></div><div><small>הושלם</small><strong>7</strong></div></div>
+    <div class="mock-body"><div class="mock-row"><i>חבר צוות א׳</i><em>זמין</em></div><div class="mock-row"><i>חבר צוות ב׳</i><em>בפגישה</em></div><div class="mock-row"><i>חבר צוות ג׳</i><em>משימה</em></div></div>
+  </div>
+    <span class="video-teaser-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+    <div class="video-teaser-overlay"><span class="video-teaser-tag">צוות</span><h3>לוח צוות</h3></div>
+  </a>
+                    <a class="video-teaser" href="demos.html#demo-full" id="teaser-full">
+    <div class="mock-screen" role="img" aria-label="סיכום יומי">
+    <div class="mock-bar"><span></span><span></span><span></span><b>סיכום יומי</b></div>
+    <div class="mock-kpis"><div><small>פתוח</small><strong>12</strong></div><div><small>היום</small><strong>4</strong></div><div><small>הושלם</small><strong>7</strong></div></div>
+    <div class="mock-body"><div class="mock-row"><i>יעד לדוגמה</i><em>פתוח</em></div><div class="mock-row"><i>מעקב לדוגמה</i><em>בתהליך</em></div><div class="mock-row"><i>סיכום לדוגמה</i><em>מוכן</em></div></div>
+  </div>
+    <span class="video-teaser-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+    <div class="video-teaser-overlay"><span class="video-teaser-tag">מסך מלא</span><h3>סיכום יומי</h3></div>
+  </a>
+                </div>
+                <div class="process-cinema-cta">
+                    <a href="demos.html" class="btn btn-white">לכל ההדגמות המלאות</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Section -->
+    <section class="before-after-section">
+        <div class="container">
+            <p class="section-tag" data-content="beforeAfter.tag" hidden></p>
+            <h2 class="section-title animated-title" data-content="beforeAfter.title">ההבדל הברור לפני/אחרי - מערכת מותאמת אישית לעסק:</h2>
+            <div class="ba-grid">
+                <div class="ba-card ba-before">
+                    <div class="ba-header">
+                        <span class="ba-icon">&#10007;</span>
+                        <h3 data-content="beforeAfter.beforeTitle">בלי מערכת</h3>
+                    </div>
+                    <ul class="ba-list" id="baBeforeList"></ul>
+                </div>
+                <div class="ba-card ba-after">
+                    <div class="ba-header">
+                        <span class="ba-icon">&#10003;</span>
+                        <h3 data-content="beforeAfter.afterTitle">עם מערכת</h3>
+                    </div>
+                    <ul class="ba-list" id="baAfterList"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <p class="section-tag" data-content="faq.tag">שאלות נפוצות</p>
+            <h2 class="section-title animated-title" data-content="faq.title">יש שאלות? יש תשובות.</h2>
+            
+            <div class="faq-list" id="faqList"></div>
+        </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section class="cta-section summary-section">
+        <div class="container">
+            <div class="cta-content">
+                <p class="summary-para" data-content="cta.para1">העסק שלכם - הוא האור הייחודי שאתם מביאים לעולם.</p>
+                <p class="summary-para" data-content="cta.para2">ומערכות Smart Business הן הכלי היציב להחזיק את הברכה הזו.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <p class="section-tag" data-content="contact.tag" hidden></p>
+                <h2 class="section-title animated-title" data-content="contact.title">רוצים לשמוע עוד?</h2>
+                <p class="section-subtitle" data-content="contact.subtitle">
+                    הטופס נשאר בדפדפן. אין שליחה ואין שמירה.
+                </p>
+                
+                <form class="contact-form">
+                    <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">
+                        <label>אל תמלאו שדה זה<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" data-content="contact.labelName">שם מלא</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="business" data-content="contact.labelBusiness">שם העסק</label>
+                        <input type="text" id="business" name="business">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" data-content="contact.labelPhone">טלפון</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-content="contact.labelEmail">אימייל</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message" data-content="contact.labelMessage">מה הצורך העסקי הכי בוער?</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-content="contact.submitBtn">שלחו פרטים</button>
+                </form>
+            </div>
+            
+            <div class="contact-info">
+                <div class="info-card">
+                    <h3>יצירת קשר בדמו</h3>
+                    <p>אין טלפון, אין מייל ואין וואטסאפ. מה שממלאים בטופס נשאר בדפדפן.</p>
+                </div>
+                <div class="info-card">
+                    <h3>משרד לדוגמה</h3>
+                    <p>רחוב ההדגמה 1</p>
+                    <p>עיר לדוגמה</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="public/logo-white.svg" alt="אופק דסק">
+                </div>
+                <p class="footer-text" data-content="footer.quote">
+                    עסק מסודר הוא עסק שרואים אותו במבט אחד.
+                </p>
+                <div class="footer-bottom">
+                    <p data-content="footer.copyright">© 2026 אופק דסק. כל הזכויות שמורות.</p>
+                    <p class="footer-credit">הדגמה לתיק עבודות. כל הזכויות שמורות ל-OfficeSense ול-Business Room. השמות, הנתונים והמסכים מומצאים, בלי פרטים מזהים ובלי מידע סודי.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA + Actions -->
+    <aside class="floating-actions" id="floatingCta" aria-label="יצירת קשר מהיר">
+        <button type="button" class="floating-cta-tab" id="floatingCtaTab" hidden aria-label="פתיחת יצירת קשר">
+            <span data-content="floatingCta.tabLabel">עצרו רגע!</span>
+        </button>
+
+        <div class="floating-cta-card" id="floatingCtaCard">
+            <button type="button" class="floating-cta-close" id="floatingCtaClose" aria-label="סגור">×</button>
+            <h3 class="floating-cta-title" data-content="floatingCta.title">עצרו רגע!</h3>
+            <p class="floating-cta-subtitle" data-content="floatingCta.subtitle">שאלון אבחון עסקי ב- 3 דקות בלבד</p>
+            <p class="floating-cta-reveal" data-content="floatingCta.revealIntro">בדקו את מצב העסק שלכם בשלושת התחומים:</p>
+            <ul class="floating-cta-bullets" id="floatingCtaBullets" aria-label="שלושת עמודי התווך">
+                <li>שיווק</li>
+                <li>פיננסים</li>
+                <li>ניהול</li>
+            </ul>
+            <a href="#business-needs" id="floatingCtaAction" class="btn btn-primary btn-sm floating-cta-action">לאבחון מהיר</a>
+        </div>
+
+        <a href="#contact" class="fab fab-phone" aria-label="מעבר לטופס ההדגמה">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        </a>
+        <a href="#contact" class="fab fab-whatsapp" aria-label="מעבר לטופס ההדגמה">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+    </aside>
+
+    <div id="contentLoadError" class="content-load-error" hidden role="alert">
+        <p>לא ניתן לטעון את תוכן האתר. נסו לרענן את הדף.</p>
+    </div>
+
+    <script src="content-sanitize.js"></script>
+    <script src="content-loader.js"></script>
+    <script src="script-new.js"></script>
+</body>
+</html>

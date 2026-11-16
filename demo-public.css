@@ -1,0 +1,77 @@
+/* Public demo layer */
+.rights-banner {
+    position: fixed;
+    z-index: 1200;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2B2D2F;
+    color: #FAF7F2;
+    text-align: center;
+    font-family: Heebo, Assistant, sans-serif;
+    font-size: 0.78rem;
+    line-height: 1.45;
+    padding: 0.5rem 1rem 0.6rem;
+}
+body { padding-bottom: 3.4rem; }
+.floating-actions { bottom: 4.2rem; }
+.nav-logo img,
+.footer-logo img { height: 42px; width: auto; }
+.mock-screen {
+    background: #fff;
+    color: #2B2D2F;
+    border-radius: 12px;
+    overflow: hidden;
+    min-height: 180px;
+    text-align: right;
+    font-family: Heebo, Assistant, sans-serif;
+}
+.mock-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #2B2D2F;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+}
+.mock-bar span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #C9C2B8;
+}
+.mock-bar b { margin-right: 8px; font-weight: 600; }
+.mock-kpis {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 10px;
+    background: #FAF7F2;
+}
+.mock-kpis div { background: #fff; border-radius: 8px; padding: 6px 8px; }
+.mock-kpis small { display: block; color: #6B6B6B; font-size: 0.7rem; }
+.mock-kpis strong { font-size: 1rem; }
+.mock-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 12px;
+    border-top: 1px solid #F0EBE3;
+    font-size: 0.86rem;
+}
+.mock-row em { color: #AA2319; font-style: normal; font-weight: 600; }
+.wall-tile .mock-screen { border-radius: 0; min-height: 220px; }
+.video-teaser .mock-screen { height: 100%; border-radius: 0; }
+.demo-video-container .mock-screen { position: absolute; inset: 0; }
+.mock-player { background: #2B2D2F; border-radius: 18px; padding: 16px; }
+.mock-player-note { color: #fff; text-align: center; margin: 10px 0 0; }
+.quote-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.quote-card { background: rgba(255,255,255,0.12); color: #fff; border-radius: 16px; padding: 18px; }
+.quote-card span { display: block; margin-top: 10px; opacity: 0.8; font-size: 0.85rem; }
+.demo-result ul { margin: 8px 0 0; padding-right: 18px; }
+.sample-chat { max-width: 640px; margin: 0 auto; display: grid; gap: 10px; }
+.sample-chat-label { text-align: center; color: #6B6B6B; }
+.sample-bubble { background: #fff; border-radius: 16px; padding: 14px 16px; }
+.sample-user { background: #AA2319; color: #fff; }
+.shlomi-avatar { object-fit: cover; background: #F3E6DE; }
