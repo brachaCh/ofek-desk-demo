@@ -5,16 +5,55 @@
     left: 0;
     right: 0;
     bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem 0.5rem;
     background: #2B2D2F;
     color: #FAF7F2;
     text-align: center;
     font-family: Heebo, Assistant, sans-serif;
     font-size: 0.78rem;
     line-height: 1.45;
-    padding: 0.5rem 1rem 0.6rem;
+    padding: 0.45rem 1rem 0.55rem;
 }
-body { padding-bottom: 3.4rem; }
-.floating-actions { bottom: 4.2rem; }
+.rights-logo {
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
+}
+.rights-logo img {
+    height: 26px;
+    width: auto;
+    max-width: 148px;
+    object-fit: contain;
+    display: block;
+}
+.rights-logo-ofisense {
+    background: #fff;
+    border-radius: 4px;
+    padding: 3px 7px;
+}
+.rights-logo-ofisense img {
+    height: 18px;
+}
+.footer-rights {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem 0.55rem;
+    margin-top: 0.85rem;
+    font-size: 0.82rem;
+    opacity: 1;
+}
+body { padding-bottom: 5.6rem; }
+.floating-actions { bottom: 6.4rem; }
+@media (max-width: 768px) {
+    body { padding-bottom: 7.2rem; }
+    .floating-actions { bottom: 8rem; }
+}
 .nav-logo img,
 .footer-logo img { height: 42px; width: auto; }
 .mock-screen {
